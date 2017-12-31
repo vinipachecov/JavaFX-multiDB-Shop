@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="343.0" prefWidth="479.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="brandSearchTextField" layoutX="35.0" layoutY="51.0" onKeyPressed="#Search" prefHeight="29.0" prefWidth="336.0" />
+      <TableView fx:id="brandTable" layoutX="35.0" layoutY="100.0" prefHeight="197.0" prefWidth="409.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="198.0" text="ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="210.0" text="Brand Name" />
+        </columns>
+      </TableView>
+      <Label layoutX="35.0" layoutY="23.0" text="Search Brands:" />
+      <Button layoutX="384.0" layoutY="51.0" mnemonicParsing="false" onAction="#Search" prefHeight="29.0" prefWidth="59.0" text="Go" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="175.0" prefWidth="378.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="brandTextField" layoutX="41.0" layoutY="63.0" />
+      <Label layoutX="41.0" layoutY="33.0" text="Choose a Brand name:" />
+      <Button layoutX="155.0" layoutY="127.0" mnemonicParsing="false" onAction="#cancel" prefHeight="29.0" prefWidth="96.0" text="Cancel" />
+      <Button layoutX="263.0" layoutY="127.0" mnemonicParsing="false" onAction="#checkForm" prefHeight="29.0" prefWidth="96.0" text="Add Brand" />
+   </children>
+</AnchorPane>

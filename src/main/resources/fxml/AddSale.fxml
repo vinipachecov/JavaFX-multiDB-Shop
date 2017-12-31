@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="614.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="65.0" layoutY="61.0" text="Client Name:" />
+      <Button layoutX="371.0" layoutY="484.0" mnemonicParsing="false" onAction="#cancel" prefHeight="29.0" prefWidth="95.0" text="Cancel" />
+      <Button fx:id="addFinishSaleButton" layoutX="483.0" layoutY="484.0" mnemonicParsing="false" onAction="#checkForm" prefHeight="29.0" prefWidth="95.0" text="Add Sale" />
+      <ComboBox fx:id="clientComboBox" layoutX="66.0" layoutY="87.0" prefWidth="150.0" promptText="Find Cient" />
+      <TextField fx:id="discountTextField" layoutX="256.0" layoutY="87.0" />
+      <TableView fx:id="saleTable" layoutX="65.0" layoutY="143.0" prefHeight="268.0" prefWidth="502.0">
+        <columns>
+          <TableColumn fx:id="productNameColumn" prefWidth="115.0" text="Product Name" />
+          <TableColumn fx:id="productBrandColumn" prefWidth="70.0" text="Brand" />
+            <TableColumn fx:id="productTypeColumn" prefWidth="122.0" text="Type" />
+            <TableColumn fx:id="productQuantityColumn" prefWidth="100.0" text="Quantity" />
+            <TableColumn fx:id="totalProductPriceColumn" prefWidth="94.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="256.0" layoutY="61.0" text="Discount:" />
+      <Button fx:id="addItemButton" layoutX="65.0" layoutY="484.0" mnemonicParsing="false" onAction="#addItemSale" prefHeight="29.0" prefWidth="110.0" text="Add item" />
+      <Label layoutX="65.0" layoutY="424.0" text="Subtotal R$">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="subtotalLabel" layoutX="141.0" layoutY="424.0" text="0.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="453.0" text="Total R$">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalLabel" layoutX="120.0" layoutY="454.0" text="0.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="5.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMainScreen" />
+   </children>
+</AnchorPane>

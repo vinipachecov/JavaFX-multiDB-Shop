@@ -1,0 +1,50 @@
+/*.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}*/
+
+.tab-header-background {
+    -fx-background-color: #B3E5FC;
+}
+
+
+
+.tab-pane
+{
+    -fx-background-color: #FFFFFF;
+
+}
+
+.pane{
+    -fx-background-color: #d5f8ff;
+}
+
+.tab:selected{
+    -fx-background-color: #0288D1;
+}
+
+
+
+.tab {
+    -fx-background-color: #a0d1ff;
+}
+
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #020202;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+
+
+
+/*.tab-label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 18px;
+}*/
+
+
+
+
+

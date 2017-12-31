@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="834.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="supplierSearchTextField" layoutX="35.0" layoutY="51.0" prefHeight="29.0" prefWidth="336.0" promptText="Supplier Fantasy Name" />
+      <TableView fx:id="supplierTable" layoutX="35.0" layoutY="98.0" prefHeight="381.0" prefWidth="761.0">
+        <columns>
+          <TableColumn fx:id="socialColumn" prefWidth="148.0" text="SocialReason" />
+          <TableColumn fx:id="emailColumn" prefWidth="149.0" text="email" />
+            <TableColumn fx:id="cnpjColumn" prefWidth="118.0" text="cnpj" />
+            <TableColumn fx:id="telephoneColumn" prefWidth="91.0" text="telephone" />
+            <TableColumn fx:id="fantasyNameColumn" prefWidth="164.0" text="Fantasy Name" />
+            <TableColumn fx:id="purchasesColumn" prefWidth="90.0" text="Purchases" />
+        </columns>
+      </TableView>
+      <Label layoutX="35.0" layoutY="23.0" text="Search Suppliers:" />
+      <Button layoutX="378.0" layoutY="51.0" mnemonicParsing="false" onAction="#Search" prefHeight="29.0" prefWidth="54.0" text="Go" />
+   </children>
+</AnchorPane>

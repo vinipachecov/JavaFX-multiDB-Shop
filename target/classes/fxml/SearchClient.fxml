@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="523.0" prefWidth="715.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="clientSearchTextField" layoutX="35.0" layoutY="51.0" prefHeight="29.0" prefWidth="336.0" promptText="Client Name" />
+      <TableView fx:id="clientTable" layoutX="35.0" layoutY="98.0" prefHeight="381.0" prefWidth="604.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="100.0" text="Name" />
+          <TableColumn fx:id="numsalesColumn" prefWidth="139.0" text="Number of Sales" />
+            <TableColumn fx:id="emailColumn" prefWidth="116.0" text="email" />
+            <TableColumn fx:id="telephoneColumn" prefWidth="82.0" text="telephone" />
+            <TableColumn fx:id="govidColumn" prefWidth="82.0" text="GID" />
+            <TableColumn fx:id="birthdateColumn" prefWidth="84.0" text="BirthDate" />
+        </columns>
+      </TableView>
+      <Label layoutX="35.0" layoutY="23.0" text="Search Clients:" />
+      <Button layoutX="378.0" layoutY="51.0" mnemonicParsing="false" onAction="#Search" prefHeight="29.0" prefWidth="257.0" text="Go" />
+   </children>
+</AnchorPane>

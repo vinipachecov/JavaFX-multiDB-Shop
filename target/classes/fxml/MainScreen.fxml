@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="469.0" prefWidth="865.0" styleClass="mainFxmlClass" stylesheets="@/styles/panes.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar fx:id="menuBar" prefHeight="29.0" prefWidth="865.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="User">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#addUserMenu" text="Add User" />
+                  <MenuItem mnemonicParsing="false" onAction="#Logout" text="Logout" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Sales orders">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#addSale" text="Add Sale Order" />
+                  <MenuItem mnemonicParsing="false" onAction="#searchSale" text="Search..." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Purchase orders">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#addPurchase" text="Add purchase order" />
+                  <MenuItem mnemonicParsing="false" onAction="#searchPurchase" text="Search..." />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Clients">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#addClient" text="Add Client" />
+                  <MenuItem mnemonicParsing="false" text="Change Client settings " />
+                  <MenuItem mnemonicParsing="false" onAction="#searchClients" text="Search..." />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Suppliers">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#addSupplier" text="Add Supplier" />
+                  <MenuItem mnemonicParsing="false" text="Change Supplier settings " />
+                  <MenuItem mnemonicParsing="false" onAction="#searchSupplier" text="Search..." />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Products">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#addProduct" text="Add a Product" />
+                  <MenuItem mnemonicParsing="false" text="Change a Product" />
+                  <MenuItem mnemonicParsing="false" onAction="#searchProduct" text="Search..." />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Brands">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#addBrands" text="Add new Brand" />
+                  <MenuItem mnemonicParsing="false" text="Change a Brand Setting..." />
+                  <MenuItem mnemonicParsing="false" onAction="#searchBrands" text="Search..." />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Types">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#addTypes" text="Add new Product Type" />
+                  <MenuItem mnemonicParsing="false" text="Change a Type Setting..." />
+                  <MenuItem mnemonicParsing="false" onAction="#searchTypes" text="Search..." />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="History">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#checkHistory" text="Check History" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane layoutX="439.0" layoutY="29.0" prefHeight="435.0" prefWidth="421.0" stylesheets="@../styles/panes.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="TopSaleProducts">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="273.0" prefWidth="335.0" styleClass="pane" stylesheets="@../styles/panes.css">
+                     <children>
+                        <TableView fx:id="topProductsTable" layoutX="22.0" layoutY="56.0" prefHeight="331.0" prefWidth="391.0">
+                          <columns>
+                            <TableColumn fx:id="productNameColumn" prefWidth="104.0" text="Product" />
+                            <TableColumn fx:id="numberSalesColumn" prefWidth="141.0" text="NumberSales" />
+                              <TableColumn fx:id="cashGeneratedColumn" prefWidth="145.0" text="CashGenerated" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="yearTopProductsTextField" layoutX="22.0" layoutY="14.0" promptText="Year for Top Products" />
+                        <Button layoutX="194.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchTopProducts" text="Check" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="WorstSaleProducts">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="273.0" prefWidth="335.0" styleClass="pane" stylesheets="@../styles/panes.css">
+                     <children>
+                        <TableView fx:id="worstProductsTable" layoutX="22.0" layoutY="56.0" prefHeight="332.0" prefWidth="385.0">
+                           <columns>
+                              <TableColumn fx:id="productNameWSColumn" prefWidth="104.0" text="Product" />
+                              <TableColumn fx:id="numberSalesWSColumn" prefWidth="127.0" text="NumberSales" />
+                              <TableColumn fx:id="cashGeneratedWSColumn" prefWidth="153.0" text="CashGenerated" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="yearWorstProductsTextField" layoutX="22.0" layoutY="14.0" promptText="Year for Worst Products" />
+                        <Button layoutX="194.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchWorstSaleProducts" text="Check" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Best Clients">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="pane" stylesheets="@../styles/panes.css">
+                     <children>
+                        <Button layoutX="192.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchBestClients" text="Check" />
+                        <TableView fx:id="bestClientsTable" layoutX="22.0" layoutY="56.0" prefHeight="336.0" prefWidth="380.0">
+                           <columns>
+                              <TableColumn fx:id="clientNameBCColumn" prefWidth="104.0" text="Client" />
+                              <TableColumn fx:id="boughtTimesBCColumn" prefWidth="129.0" text="BoughtTimes" />
+                              <TableColumn fx:id="cashGeneratedBCColumn" prefWidth="147.0" text="CashGenerated" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="bestClientTextField" layoutX="22.0" layoutY="14.0" promptText="ClientName" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane layoutY="29.0" prefHeight="435.0" prefWidth="438.0" stylesheets="@../styles/panes.css" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="NewClients">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="365.0" styleClass="pane" stylesheets="@../styles/panes.css">
+                     <children>
+                        <TableView fx:id="newClientsTable" layoutX="22.0" layoutY="56.0" prefHeight="332.0" prefWidth="399.0">
+                           <columns>
+                              <TableColumn fx:id="clientNameNCColumn" prefWidth="117.0" text="Client" />
+                              <TableColumn fx:id="contactColumn" prefWidth="121.0" text="Contact" />
+                              <TableColumn fx:id="JoinDateNCColumn" prefWidth="158.0" text="JoinDate" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="yearNewClientsTextField" layoutX="22.0" layoutY="14.0" promptText="Year for new Clients" />
+                        <Button layoutX="194.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchNewClients" text="Check" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Most Required Suppliers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="365.0" styleClass="pane" stylesheets="@../styles/panes.css">
+                     <children>
+                        <TableView fx:id="mostRequiredSuppliersTable" layoutX="22.0" layoutY="56.0" prefHeight="332.0" prefWidth="399.0">
+                           <columns>
+                              <TableColumn fx:id="nameMRSColumn" prefWidth="117.0" text="Supplier" />
+                              <TableColumn fx:id="totalItemsMRSColumn" prefWidth="121.0" text="TotalItems" />
+                              <TableColumn fx:id="totalPercentMRSColumn" prefWidth="158.0" text="TotalPercent" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="requiredSupplierTextField" layoutX="22.0" layoutY="14.0" promptText="SUpplier Name" />
+                        <Button layoutX="194.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchRequiredSuppliers" text="Check" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

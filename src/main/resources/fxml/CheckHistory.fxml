@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="574.0" prefWidth="924.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="dateStartSearchTextField" layoutX="109.0" layoutY="51.0" prefHeight="29.0" prefWidth="123.0" promptText="From Date" />
+      <TableView fx:id="historyTable" layoutX="35.0" layoutY="98.0" prefHeight="452.0" prefWidth="849.0">
+        <columns>
+          <TableColumn fx:id="typeColumn" prefWidth="119.0" text="Type" />
+          <TableColumn fx:id="invoiceColumn" prefWidth="105.0" text="invoice" />
+            <TableColumn fx:id="productColumn" prefWidth="115.0" text="Product" />
+            <TableColumn fx:id="quantityColumn" prefWidth="115.0" text="Quantity" />
+            <TableColumn fx:id="unitValueColumn" prefWidth="119.0" text="UnitValue" />
+            <TableColumn fx:id="totalColumn" prefWidth="119.0" text="Total" />
+            <TableColumn fx:id="DateColumn" prefWidth="155.0" text="Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="640.0" layoutY="51.0" mnemonicParsing="false" onAction="#Search" prefHeight="29.0" prefWidth="257.0" text="Go" />
+      <Label layoutX="35.0" layoutY="14.0" text="Check History" />
+      <TextField fx:id="dateToSearchTextField" layoutX="339.0" layoutY="51.0" prefHeight="29.0" prefWidth="123.0" promptText="To Date" />
+      <Label layoutX="35.0" layoutY="56.0" text="From Date" />
+      <Label layoutX="305.0" layoutY="56.0" text="To" />
+   </children>
+</AnchorPane>

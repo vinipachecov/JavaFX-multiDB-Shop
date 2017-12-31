@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <MenuBar fx:id="menuBar">
+        <menus>
+          <Menu mnemonicParsing="false" text="Usuario">
+            <items>
+              <MenuItem fx:id="addUsuarioMenuItem" mnemonicParsing="false" onAction="#addUserMenu" text="Alterar/Adicionar Usuario" />
+                  <MenuItem mnemonicParsing="false" text="Sair" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Vendas">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Adicionar" />
+                  <MenuItem mnemonicParsing="false" text="Pesquisar..." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Compras">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Adicionar Compra" />
+                  <MenuItem mnemonicParsing="false" text="Pesquisar..." />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Fornecedor">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Adicionar Fornecedor" />
+                  <MenuItem mnemonicParsing="false" text="Alterar Fornecedor" />
+                  <MenuItem mnemonicParsing="false" text="Pesquisar..." />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Produto">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Adicionar novo Produto" />
+                  <MenuItem mnemonicParsing="false" text="Alterar Produto" />
+                  <MenuItem mnemonicParsing="false" text="Pesquisar..." />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Tipo">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Adicionar novo Tipo" />
+                  <MenuItem mnemonicParsing="false" text="Alterar Tipo" />
+                  <MenuItem mnemonicParsing="false" text="Pesquisar..." />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Historico">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Ver Historico" />
+                  <MenuItem mnemonicParsing="false" text="Pesquisar..." />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</fx:root>

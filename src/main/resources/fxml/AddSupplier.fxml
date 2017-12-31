@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="303.0" prefWidth="538.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <Button layoutX="315.0" layoutY="269.0" mnemonicParsing="false" onAction="#cancel" prefHeight="29.0" prefWidth="100.0" text="Cancel" />
+      <Button layoutX="430.0" layoutY="269.0" mnemonicParsing="false" onAction="#checkForm" prefHeight="29.0" prefWidth="100.0" text="Add Supplier" />
+      <TextField fx:id="socialReasonTextField" layoutX="32.0" layoutY="60.0" />
+      <Label layoutX="32.0" layoutY="34.0" text="Social Reason" />
+      <Label layoutX="29.0" layoutY="107.0" text="Email" />
+      <TextField fx:id="emailTextField" layoutX="29.0" layoutY="135.0" />
+      <Label layoutX="300.0" layoutY="107.0" text="CNPJ" />
+      <TextField fx:id="cnpjTextField" layoutX="300.0" layoutY="135.0" />
+      <Label layoutX="31.0" layoutY="191.0" text="Telephone" />
+      <TextField fx:id="telephoneTextField" layoutX="29.0" layoutY="220.0" />
+      <Separator layoutX="259.0" layoutY="7.0" orientation="VERTICAL" prefHeight="317.0" prefWidth="5.0" />
+      <TextField fx:id="fantasynameTextField" layoutX="300.0" layoutY="60.0" />
+      <Label layoutX="300.0" layoutY="34.0" text="Fantasy Name" />
+   </children>
+</AnchorPane>

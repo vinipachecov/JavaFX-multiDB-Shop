@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="523.0" prefWidth="804.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="saleSearchTextField" layoutX="35.0" layoutY="51.0" prefHeight="29.0" prefWidth="464.0" promptText="Supplier Client" />
+      <TableView fx:id="saleTable" layoutX="35.0" layoutY="98.0" prefHeight="381.0" prefWidth="732.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="119.0" text="Name" />
+          <TableColumn fx:id="invoiceColumn" prefWidth="105.0" text="invoice" />
+            <TableColumn fx:id="subtotalColumn" prefWidth="115.0" text="Subtotal" />
+            <TableColumn fx:id="discountColumn" prefWidth="115.0" text="Discount" />
+            <TableColumn fx:id="totalColumn" prefWidth="119.0" text="Total" />
+            <TableColumn fx:id="saleDateColumn" prefWidth="155.0" text="saleDate" />
+        </columns>
+      </TableView>
+      <Label layoutX="35.0" layoutY="23.0" text="Search Sales:" />
+      <Button layoutX="510.0" layoutY="51.0" mnemonicParsing="false" onAction="#Search" prefHeight="29.0" prefWidth="257.0" text="Go" />
+   </children>
+</AnchorPane>

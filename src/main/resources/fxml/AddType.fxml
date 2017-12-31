@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="165.0" prefWidth="423.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <Button layoutX="209.0" layoutY="128.0" mnemonicParsing="false" onAction="#cancel" prefHeight="28.0" prefWidth="95.0" text="Cancel" />
+      <Button layoutX="308.0" layoutY="128.0" mnemonicParsing="false" onAction="#checkForm" prefHeight="28.0" prefWidth="95.0" text="Add Type" />
+      <TextField fx:id="typeTextField" layoutX="47.0" layoutY="59.0" promptText="Whey Protein" />
+      <Label layoutX="47.0" layoutY="30.0" text="New Product Type:" />
+   </children>
+</AnchorPane>

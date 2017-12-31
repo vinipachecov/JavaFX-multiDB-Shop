@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="834.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="productSearchTextField" layoutX="35.0" layoutY="51.0" prefHeight="29.0" prefWidth="336.0" promptText="Product Name" />
+      <TableView fx:id="productTable" layoutX="35.0" layoutY="98.0" prefHeight="381.0" prefWidth="761.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="141.0" text="Name" />
+          <TableColumn fx:id="brandColumn" prefWidth="110.0" text="Brand" />
+            <TableColumn fx:id="typeColumn" prefWidth="99.0" text="Type" />
+            <TableColumn fx:id="minimumQuantityColumn" prefWidth="111.0" text="MinQuant" />
+            <TableColumn fx:id="currentQuantityColumn" prefWidth="105.0" text="CurQuant" />
+            <TableColumn fx:id="unitValueColumn" prefWidth="77.0" text="UnitValue" />
+            <TableColumn fx:id="unitTypeColumn" prefWidth="117.0" text="UnitType" />
+        </columns>
+      </TableView>
+      <Label layoutX="35.0" layoutY="23.0" text="Search Products:" />
+      <Button layoutX="378.0" layoutY="51.0" mnemonicParsing="false" onAction="#Search" prefHeight="29.0" prefWidth="54.0" text="Go" />
+   </children>
+</AnchorPane>
